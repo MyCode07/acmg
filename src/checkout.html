@@ -1,0 +1,159 @@
+@@include('./html/head.html', {
+"title":"Оформление заказа",
+})
+
+@@include('./html/header.html', {
+"class":"",
+})
+
+<main>
+
+    <div class="breadcrumbs">
+        <div class="_container">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="/">
+                        <span>Главная</span>
+                    </a>
+                    <div class="sep">/</div>
+                </li>
+                <li class="active">
+                    <span>Оформление заказа</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="section text-page checkout-page">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h1>Оформление заказа</h1>
+                </div>
+                <div class="form form-vertical">
+                    <div class="flex">
+                        <div class="checkout-fields">
+                            <div class="label">ваши данные</div>
+                            <div class="form__item">
+                                <input type="text" placeholder="ФИО">
+                            </div>
+                            <div class="form__row">
+                                <div class="form__item">
+                                    <input type="email" placeholder="E-mail">
+                                </div>
+                                <div class="form__item">
+                                    <input type="text" class="_mask-phone" placeholder="+7 (___) ___-__-__ *">
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <input type="text" placeholder="Населенный пункт">
+                            </div>
+
+                            <div class="label">Информация об организации</div>
+                            <div class="form__row">
+                                <div class="form__item">
+                                    <input type="text" placeholder="ИНН">
+                                </div>
+                                <div class="form__item">
+                                    <input type="text" placeholder="ОГРН">
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <input type="text" placeholder="Название организации">
+                            </div>
+
+                            <div class="form__item">
+                                <input type="text" placeholder="Адрес организации">
+                            </div>
+                            <div class="form__item">
+                                <textarea placeholder="Примечание к заказу"></textarea>
+                            </div>
+
+
+                            <div class="label">Способ доставки</div>
+                            <label for="shipping-samovyoz">
+                                <input type="radio" name="shipping" id="shipping-samovyoz" checked>
+                                <span></span>
+                                <div>
+                                    <b>Самовывоз</b><br>
+                                    Московская область, г.о. Ленинский, рп Горки Ленинские, промзона Пуговичино, д. 8,
+                                    помещ. 37.7
+                                </div>
+                            </label>
+                            <label for="shipping-dostavka">
+                                <input type="radio" name="shipping" id="shipping-dostavka">
+                                <span></span>
+                                <div>
+                                    <b>Доставка</b> (стоимость рассчитывается индивидуально)
+                                </div>
+                            </label>
+
+                            <div class="label">Способ оплаты (Безналичный расчет)</div>
+                            <label for="payment-qrcode">
+                                <input type="radio" name="payment" id="payment-qrcode" checked>
+                                <span></span>
+                                <div>
+                                    <b>QR-код</b>
+                                </div>
+                            </label>
+                            <label for="payment-card">
+                                <input type="radio" name="payment" id="payment-card">
+                                <span></span>
+                                <div>
+                                    <b>Банковская карта</b>
+                                </div>
+                            </label>
+                            <label for="payment-sbp">
+                                <input type="radio" name="payment" id="payment-sbp">
+                                <span></span>
+                                <div>
+                                    <b>СБП</b>
+                                </div>
+                            </label>
+                            <label for="payment-schet">
+                                <input type="radio" name="payment" id="payment-schet">
+                                <span></span>
+                                <div>
+                                    <b>По счету</b>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="cart-total width-397 checkout-total">
+                            <p class="cart-total__title">Итого</p>
+                            <ol class="chars">
+                                <li>
+                                    <span>Электрический штабелер с раздвижными вилами PROLIFT M2 SPN 1016
+                                        <span>1 шт.</span>
+                                    </span>
+                                    <span>113 317 руб.</span>
+                                </li>
+                                <li>
+                                    <span>
+                                        PROLIFT M2 SPN 1016 
+                                        <span>1 шт.</span>
+                                    </span>
+                                    <span>113 317 руб.</span>
+                                </li>
+                            </ol>
+                            <div class="cart-total__total cart-total__price">226 734 ₽</div>
+
+                            <label class="form__privacy" for="accept">
+                                <span></span>
+                                <input type="checkbox" name="accept" id="accept">
+                                <p>Я согласен с <a href="/privacy-policy/" target="_blank">Политикой конфиденциальности
+                                        и
+                                        обработкой персональных данных</a></p>
+                            </label>
+                            <button class="_btn _btn-accent-dark">Подтвердить заказ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

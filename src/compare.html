@@ -1,0 +1,64 @@
+@@include('./html/head.html', {
+"title":"Сравнение",
+})
+
+@@include('./html/header.html', {
+"class":"",
+})
+
+<main>
+
+    <div class="breadcrumbs">
+        <div class="_container">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="/">
+                        <span>Главная</span>
+                    </a>
+                    <div class="sep">/</div>
+                </li>
+                <li class="active">
+                    <span>Сравнение</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="section text-page page-compare">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h1>Сравнение</h1>
+                </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            @@include('html/parts/product-copmare.html',{})
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('html/parts/product-copmare.html',{})
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('html/parts/product-copmare.html',{})
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('html/parts/product-copmare.html',{})
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('html/parts/product-copmare.html',{})
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('html/parts/product-copmare.html',{})
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('html/parts/request.html',{})
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

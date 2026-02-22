@@ -1,0 +1,707 @@
+@@include('./html/head.html', {
+"title":"Акция внутренняя",
+})
+
+@@include('./html/header.html', {
+"class":"",
+})
+
+<main>
+
+    <div class="breadcrumbs">
+        <div class="_container">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="/">
+                        <span>Главная</span>
+                    </a>
+                    <div class="sep">/</div>
+                </li>
+                <li>
+                    <a href="/">
+                        <span>Акции</span>
+                    </a>
+                    <div class="sep">/</div>
+                </li>
+                <li class="active">
+                    <span>Акция внутренняя</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="section products">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h1>Акция внутренняя</h1>
+                </div>
+                <div class="flex">
+                    <div class="filter">
+                        <div class="filter-top">
+                            <button class="filter-top__title">Фильтры</button>
+                            <button class="filter-close">
+                                <img src="img/icons/close.svg" alt="">
+                            </button>
+                        </div>
+                        <form action="">
+                            <div class="filter-item">
+                                <ul>
+                                    <li><a href="">Штабелеры</a></li>
+                                    <li>
+                                        <a href="">Ричтраки</a>
+                                        <ul>
+                                            <li><a href="">Ричтраки со свинцово-кислотными батареями</a></li>
+                                            <li><a href="">Ричтраки с литий-ионными батареями</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="">Складские электротележки</a></li>
+                                    <li><a href="">Гидравлические тележки рохли</a></li>
+                                    <li><a href="">Подборщики (комплектовщики) заказов</a></li>
+                                </ul>
+                            </div>
+                            <div class="filter-item filter-price">
+                                <p>Цена, руб.</p>
+                                <div class="price-inputs">
+                                    <span>
+                                        <i>от</i>
+                                        <input type="number" name="price_min" class="price-input" id="min-price"
+                                            value="1000000" data-min="1000000" data-max="12000000">
+                                    </span>
+                                    <span>
+                                        <i>до</i>
+                                        <input type="number" name="price_max" class="price-input" id="max-price"
+                                            value="12000000" data-min="1000000" data-max="12000000">
+                                    </span>
+                                </div>
+                                <div class="slider-container">
+                                    <div class="slider-track"></div>
+                                    <div class="slider-range" id="slider-range"></div>
+                                    <div class="slider-thumb min" id="min-thumb"></div>
+                                    <div class="slider-thumb max" id="max-thumb"></div>
+                                </div>
+                                <button class="_btn _btn-red price-filter-btn">Применить</button>
+                            </div>
+                            <div class="filter-item">
+                                <p><span>Наличие</span></p>
+                                <div class="filter-item__values">
+                                    <label for="pa_nalichie-В наличии">
+                                        <span></span>
+                                        <span>В наличии</span>
+                                        <input type="checkbox" id="pa_nalichie-В наличии" name="moshhnost"
+                                            value="В наличии">
+                                    </label>
+                                    <label for="pa_nalichie-Предзаказ">
+                                        <span></span>
+                                        <span>Предзаказ</span>
+                                        <input type="checkbox" id="pa_nalichie-Предзаказ" name="moshhnost"
+                                            value="Предзаказ">
+                                    </label>
+                                    <label for="pa_nalichie-Нет в наличии">
+                                        <span></span>
+                                        <span>Нет в наличии</span>
+                                        <input type="checkbox" id="pa_nalichie-Нет в наличии" name="moshhnost"
+                                            value="Нет в наличии">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-item">
+                                <p><span>Наличие платформы</span></p>
+                                <div class="filter-item__values">
+                                    <label for="pa_nalichie-В наличии">
+                                        <span></span>
+                                        <span>В наличии</span>
+                                        <input type="checkbox" id="pa_nalichie-В наличии" name="moshhnost"
+                                            value="В наличии">
+                                    </label>
+                                    <label for="pa_nalichie-Предзаказ">
+                                        <span></span>
+                                        <span>Предзаказ</span>
+                                        <input type="checkbox" id="pa_nalichie-Предзаказ" name="moshhnost"
+                                            value="Предзаказ">
+                                    </label>
+                                    <label for="pa_nalichie-Нет в наличии">
+                                        <span></span>
+                                        <span>Нет в наличии</span>
+                                        <input type="checkbox" id="pa_nalichie-Нет в наличии" name="moshhnost"
+                                            value="Нет в наличии">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-item">
+                                <p><span>Тип аккумулятора</span></p>
+                                <div class="filter-item__values">
+                                    <label for="pa_nalichie-В наличии">
+                                        <span></span>
+                                        <span>В наличии</span>
+                                        <input type="checkbox" id="pa_nalichie-В наличии" name="moshhnost"
+                                            value="В наличии">
+                                    </label>
+                                    <label for="pa_nalichie-Предзаказ">
+                                        <span></span>
+                                        <span>Предзаказ</span>
+                                        <input type="checkbox" id="pa_nalichie-Предзаказ" name="moshhnost"
+                                            value="Предзаказ">
+                                    </label>
+                                    <label for="pa_nalichie-Нет в наличии">
+                                        <span></span>
+                                        <span>Нет в наличии</span>
+                                        <input type="checkbox" id="pa_nalichie-Нет в наличии" name="moshhnost"
+                                            value="Нет в наличии">
+                                    </label>
+                                </div>
+                            </div>
+                            <button class="_btn _btn-black" data-apply-filter>Применить</button>
+                        </form>
+
+                        <div class="form form-vertical form-border">
+                            <h4>Задать вопрос</h4>
+                            <form action="#">
+                                <div class="form__item">
+                                    <input type="text" placeholder="Ваше имя">
+                                </div>
+                                <div class="form__item">
+                                    <input type="text" placeholder="+7 (___) ___-__-__ *" class="_mask-phone">
+                                </div>
+                                <div class="form__item">
+                                    <textarea placeholder="Ваш вопрос"></textarea>
+                                </div>
+                                <label class="form__privacy" for="accept">
+                                    <span></span>
+                                    <input type="checkbox" name="accept" id="accept">
+                                    <p>Я согласен с <a href="/privacy-policy/" target="_blank">Политикой
+                                            конфиденциальности и
+                                            обработкой персональных данных</a></p>
+                                </label>
+                                <button class="_btn _btn-black">Отправить</button>
+                            </form>
+                        </div>
+
+                    </div>
+                    <div class="products-grid">
+                        <div class="products-top">
+                            <button class="open-filter">Фильтры</button>
+                            <div class="catalog-sort select-input">
+                                <label data-id="0">Сначала популярные</label>
+                                <svg width="12" height="7" viewBox="0 0 12 7">
+                                    <use xlink:href='img/svg/icons.svg#arrow' />
+                                </svg>
+                                <div class="select">
+                                    <div class="select-body">
+                                        <span data-id="1">
+                                            <a href="" data-sort="price">Сначала дешевые</a>
+                                        </span>
+                                        <span data-id="2">
+                                            <a href="" data-sort="price-desc">Сначала дорогие</a>
+                                        </span>
+                                        <span data-id="3">
+                                            <a href="" data-sort="popular">Сначала популярные</a>
+                                        </span>
+                                        <span data-id="4">
+                                            <a href="" data-sort="newness">По новизне</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="products-view">
+                                <button class="view-grid _active">
+                                    <svg width="13" height="13" viewBox="0 0 13 13">
+                                        <use xlink:href='img/svg/icons.svg#view-grid' />
+                                    </svg>
+                                </button>
+                                <button class="view-list">
+                                    <svg width="18" height="13" viewBox="0 0 18 13">
+                                        <use xlink:href='img/svg/icons.svg#view-list' />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="grid grid-3">
+                            <div class="product-item">
+                                <a href="" class="product-item__img">
+                                    <img src="img/product.png" alt="">
+                                </a>
+                                <div class="product-item__actions">
+                                    <button class="add-to-favorite">
+                                        <svg width="24" height="24" viewBox="0 0 24 24">
+                                            <use xlink:href='img/svg/icons.svg#product-favorite' />
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-comapre">
+                                        <svg width="20" height="20" viewBox="0 0 20 20">
+                                            <use xlink:href='img/svg/icons.svg#product-compare' />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h4><a href="">PROLIFT M2 SPN 1016</a></h4>
+                                <p>Электрический штабелер
+                                    с раздвижными вилами</p>
+                                <div class="product-item__data">
+                                    <span><img src="img/icons/weight.svg" alt="">1000 кг</span>
+                                    <span><img src="img/icons/up-fill.svg" alt="">1.6 м</span>
+                                </div>
+                                <div class="product-item__price">
+                                    <del aria-hidden="true">
+                                        <span class="woocommerce-Price-amount amount">
+                                            <bdi>
+                                                113 317<span class="woocommerce-Price-currencySymbol">₽</span>
+                                            </bdi>
+                                        </span>
+                                    </del>
+                                    <ins aria-hidden="true">
+                                        <span class="woocommerce-Price-amount amount">
+                                            <bdi>
+                                                1 000 <span class="woocommerce-Price-currencySymbol">₽</span>
+                                            </bdi>
+                                        </span>
+                                    </ins>
+                                </div>
+                                <button class="_btn _btn-accent add-to-cart">
+                                    <img src="img/icons/cart-white.svg" alt="">
+                                    Добавить в корзину
+                                </button>
+                            </div>
+                            <div class="product-item">
+                                <a href="" class="product-item__img">
+                                    <img src="img/product.png" alt="">
+                                </a>
+                                <div class="product-item__actions">
+                                    <button class="add-to-favorite">
+                                        <svg width="24" height="24" viewBox="0 0 24 24">
+                                            <use xlink:href='img/svg/icons.svg#product-favorite' />
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-comapre">
+                                        <svg width="20" height="20" viewBox="0 0 20 20">
+                                            <use xlink:href='img/svg/icons.svg#product-compare' />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h4><a href="">PROLIFT M2 SPN 1016</a></h4>
+                                <p>Электрический штабелер
+                                    с раздвижными вилами</p>
+                                <div class="product-item__data">
+                                    <span><img src="img/icons/weight.svg" alt="">1000 кг</span>
+                                    <span><img src="img/icons/up-fill.svg" alt="">1.6 м</span>
+                                </div>
+                                <div class="product-item__price">
+                                    <del aria-hidden="true">
+                                        <span class="woocommerce-Price-amount amount">
+                                            <bdi>
+                                                113 317<span class="woocommerce-Price-currencySymbol">₽</span>
+                                            </bdi>
+                                        </span>
+                                    </del>
+                                    <ins aria-hidden="true">
+                                        <span class="woocommerce-Price-amount amount">
+                                            <bdi>
+                                                1 000 <span class="woocommerce-Price-currencySymbol">₽</span>
+                                            </bdi>
+                                        </span>
+                                    </ins>
+                                </div>
+                                <button class="_btn _btn-accent add-to-cart">
+                                    <img src="img/icons/cart-white.svg" alt="">
+                                    Добавить в корзину
+                                </button>
+                            </div>
+                            <div class="product-item">
+                                <a href="" class="product-item__img">
+                                    <img src="img/product.png" alt="">
+                                </a>
+                                <div class="product-item__actions">
+                                    <button class="add-to-favorite">
+                                        <svg width="24" height="24" viewBox="0 0 24 24">
+                                            <use xlink:href='img/svg/icons.svg#product-favorite' />
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-comapre">
+                                        <svg width="20" height="20" viewBox="0 0 20 20">
+                                            <use xlink:href='img/svg/icons.svg#product-compare' />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h4><a href="">PROLIFT M2 SPN 1016</a></h4>
+                                <p>Электрический штабелер
+                                    с раздвижными вилами</p>
+                                <div class="product-item__data">
+                                    <span><img src="img/icons/weight.svg" alt="">1000 кг</span>
+                                    <span><img src="img/icons/up-fill.svg" alt="">1.6 м</span>
+                                </div>
+                                <div class="product-item__price">
+                                    <del aria-hidden="true">
+                                        <span class="woocommerce-Price-amount amount">
+                                            <bdi>
+                                                113 317<span class="woocommerce-Price-currencySymbol">₽</span>
+                                            </bdi>
+                                        </span>
+                                    </del>
+                                    <ins aria-hidden="true">
+                                        <span class="woocommerce-Price-amount amount">
+                                            <bdi>
+                                                1 000 <span class="woocommerce-Price-currencySymbol">₽</span>
+                                            </bdi>
+                                        </span>
+                                    </ins>
+                                </div>
+                                <button class="_btn _btn-accent add-to-cart">
+                                    <img src="img/icons/cart-white.svg" alt="">
+                                    Добавить в корзину
+                                </button>
+                            </div>
+                            <div class="product-item">
+                                <a href="" class="product-item__img">
+                                    <img src="img/product.png" alt="">
+                                </a>
+                                <div class="product-item__actions">
+                                    <button class="add-to-favorite">
+                                        <svg width="24" height="24" viewBox="0 0 24 24">
+                                            <use xlink:href='img/svg/icons.svg#product-favorite' />
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-comapre">
+                                        <svg width="20" height="20" viewBox="0 0 20 20">
+                                            <use xlink:href='img/svg/icons.svg#product-compare' />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h4><a href="">PROLIFT M2 SPN 1016</a></h4>
+                                <p>Электрический штабелер
+                                    с раздвижными вилами</p>
+                                <div class="product-item__data">
+                                    <span><img src="img/icons/weight.svg" alt="">1000 кг</span>
+                                    <span><img src="img/icons/up-fill.svg" alt="">1.6 м</span>
+                                </div>
+                                <div class="product-item__price">
+                                    <del aria-hidden="true">
+                                        <span class="woocommerce-Price-amount amount">
+                                            <bdi>
+                                                113 317<span class="woocommerce-Price-currencySymbol">₽</span>
+                                            </bdi>
+                                        </span>
+                                    </del>
+                                    <ins aria-hidden="true">
+                                        <span class="woocommerce-Price-amount amount">
+                                            <bdi>
+                                                1 000 <span class="woocommerce-Price-currencySymbol">₽</span>
+                                            </bdi>
+                                        </span>
+                                    </ins>
+                                </div>
+                                <button class="_btn _btn-accent add-to-cart">
+                                    <img src="img/icons/cart-white.svg" alt="">
+                                    Добавить в корзину
+                                </button>
+                            </div>
+                            <div class="product-item">
+                                <a href="" class="product-item__img">
+                                    <img src="img/product.png" alt="">
+                                </a>
+                                <div class="product-item__actions">
+                                    <button class="add-to-favorite">
+                                        <svg width="24" height="24" viewBox="0 0 24 24">
+                                            <use xlink:href='img/svg/icons.svg#product-favorite' />
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-comapre">
+                                        <svg width="20" height="20" viewBox="0 0 20 20">
+                                            <use xlink:href='img/svg/icons.svg#product-compare' />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h4><a href="">PROLIFT M2 SPN 1016</a></h4>
+                                <p>Электрический штабелер
+                                    с раздвижными вилами</p>
+                                <div class="product-item__data">
+                                    <span><img src="img/icons/weight.svg" alt="">1000 кг</span>
+                                    <span><img src="img/icons/up-fill.svg" alt="">1.6 м</span>
+                                </div>
+                                <div class="product-item__price">
+                                    <del aria-hidden="true">
+                                        <span class="woocommerce-Price-amount amount">
+                                            <bdi>
+                                                113 317<span class="woocommerce-Price-currencySymbol">₽</span>
+                                            </bdi>
+                                        </span>
+                                    </del>
+                                    <ins aria-hidden="true">
+                                        <span class="woocommerce-Price-amount amount">
+                                            <bdi>
+                                                1 000 <span class="woocommerce-Price-currencySymbol">₽</span>
+                                            </bdi>
+                                        </span>
+                                    </ins>
+                                </div>
+                                <button class="_btn _btn-accent add-to-cart">
+                                    <img src="img/icons/cart-white.svg" alt="">
+                                    Добавить в корзину
+                                </button>
+                            </div>
+                            <div class="product-item">
+                                <a href="" class="product-item__img">
+                                    <img src="img/product.png" alt="">
+                                </a>
+                                <div class="product-item__actions">
+                                    <button class="add-to-favorite">
+                                        <svg width="24" height="24" viewBox="0 0 24 24">
+                                            <use xlink:href='img/svg/icons.svg#product-favorite' />
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-comapre">
+                                        <svg width="20" height="20" viewBox="0 0 20 20">
+                                            <use xlink:href='img/svg/icons.svg#product-compare' />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h4><a href="">PROLIFT M2 SPN 1016</a></h4>
+                                <p>Электрический штабелер
+                                    с раздвижными вилами</p>
+                                <div class="product-item__data">
+                                    <span><img src="img/icons/weight.svg" alt="">1000 кг</span>
+                                    <span><img src="img/icons/up-fill.svg" alt="">1.6 м</span>
+                                </div>
+                                <div class="product-item__price">
+                                    <del aria-hidden="true">
+                                        <span class="woocommerce-Price-amount amount">
+                                            <bdi>
+                                                113 317<span class="woocommerce-Price-currencySymbol">₽</span>
+                                            </bdi>
+                                        </span>
+                                    </del>
+                                    <ins aria-hidden="true">
+                                        <span class="woocommerce-Price-amount amount">
+                                            <bdi>
+                                                1 000 <span class="woocommerce-Price-currencySymbol">₽</span>
+                                            </bdi>
+                                        </span>
+                                    </ins>
+                                </div>
+                                <button class="_btn _btn-accent add-to-cart">
+                                    <img src="img/icons/cart-white.svg" alt="">
+                                    Добавить в корзину
+                                </button>
+                            </div>
+                            <div class="product-item">
+                                <a href="" class="product-item__img">
+                                    <img src="img/product.png" alt="">
+                                </a>
+                                <div class="product-item__actions">
+                                    <button class="add-to-favorite">
+                                        <svg width="24" height="24" viewBox="0 0 24 24">
+                                            <use xlink:href='img/svg/icons.svg#product-favorite' />
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-comapre">
+                                        <svg width="20" height="20" viewBox="0 0 20 20">
+                                            <use xlink:href='img/svg/icons.svg#product-compare' />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h4><a href="">PROLIFT M2 SPN 1016</a></h4>
+                                <p>Электрический штабелер
+                                    с раздвижными вилами</p>
+                                <div class="product-item__data">
+                                    <span><img src="img/icons/weight.svg" alt="">1000 кг</span>
+                                    <span><img src="img/icons/up-fill.svg" alt="">1.6 м</span>
+                                </div>
+                                <div class="product-item__price">
+                                    <del aria-hidden="true">
+                                        <span class="woocommerce-Price-amount amount">
+                                            <bdi>
+                                                113 317<span class="woocommerce-Price-currencySymbol">₽</span>
+                                            </bdi>
+                                        </span>
+                                    </del>
+                                    <ins aria-hidden="true">
+                                        <span class="woocommerce-Price-amount amount">
+                                            <bdi>
+                                                1 000 <span class="woocommerce-Price-currencySymbol">₽</span>
+                                            </bdi>
+                                        </span>
+                                    </ins>
+                                </div>
+                                <button class="_btn _btn-accent add-to-cart">
+                                    <img src="img/icons/cart-white.svg" alt="">
+                                    Добавить в корзину
+                                </button>
+                            </div>
+                            <div class="product-item">
+                                <a href="" class="product-item__img">
+                                    <img src="img/product.png" alt="">
+                                </a>
+                                <div class="product-item__actions">
+                                    <button class="add-to-favorite">
+                                        <svg width="24" height="24" viewBox="0 0 24 24">
+                                            <use xlink:href='img/svg/icons.svg#product-favorite' />
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-comapre">
+                                        <svg width="20" height="20" viewBox="0 0 20 20">
+                                            <use xlink:href='img/svg/icons.svg#product-compare' />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h4><a href="">PROLIFT M2 SPN 1016</a></h4>
+                                <p>Электрический штабелер
+                                    с раздвижными вилами</p>
+                                <div class="product-item__data">
+                                    <span><img src="img/icons/weight.svg" alt="">1000 кг</span>
+                                    <span><img src="img/icons/up-fill.svg" alt="">1.6 м</span>
+                                </div>
+                                <div class="product-item__price">
+                                    <del aria-hidden="true">
+                                        <span class="woocommerce-Price-amount amount">
+                                            <bdi>
+                                                113 317<span class="woocommerce-Price-currencySymbol">₽</span>
+                                            </bdi>
+                                        </span>
+                                    </del>
+                                    <ins aria-hidden="true">
+                                        <span class="woocommerce-Price-amount amount">
+                                            <bdi>
+                                                1 000 <span class="woocommerce-Price-currencySymbol">₽</span>
+                                            </bdi>
+                                        </span>
+                                    </ins>
+                                </div>
+                                <button class="_btn _btn-accent add-to-cart">
+                                    <img src="img/icons/cart-white.svg" alt="">
+                                    Добавить в корзину
+                                </button>
+                            </div>
+                            <div class="product-item">
+                                <a href="" class="product-item__img">
+                                    <img src="img/product.png" alt="">
+                                </a>
+                                <div class="product-item__actions">
+                                    <button class="add-to-favorite">
+                                        <svg width="24" height="24" viewBox="0 0 24 24">
+                                            <use xlink:href='img/svg/icons.svg#product-favorite' />
+                                        </svg>
+                                    </button>
+                                    <button class="add-to-comapre">
+                                        <svg width="20" height="20" viewBox="0 0 20 20">
+                                            <use xlink:href='img/svg/icons.svg#product-compare' />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h4><a href="">PROLIFT M2 SPN 1016</a></h4>
+                                <p>Электрический штабелер
+                                    с раздвижными вилами</p>
+                                <div class="product-item__data">
+                                    <span><img src="img/icons/weight.svg" alt="">1000 кг</span>
+                                    <span><img src="img/icons/up-fill.svg" alt="">1.6 м</span>
+                                </div>
+                                <div class="product-item__price">
+                                    <del aria-hidden="true">
+                                        <span class="woocommerce-Price-amount amount">
+                                            <bdi>
+                                                113 317<span class="woocommerce-Price-currencySymbol">₽</span>
+                                            </bdi>
+                                        </span>
+                                    </del>
+                                    <ins aria-hidden="true">
+                                        <span class="woocommerce-Price-amount amount">
+                                            <bdi>
+                                                1 000 <span class="woocommerce-Price-currencySymbol">₽</span>
+                                            </bdi>
+                                        </span>
+                                    </ins>
+                                </div>
+                                <button class="_btn _btn-accent add-to-cart">
+                                    <img src="img/icons/cart-white.svg" alt="">
+                                    Добавить в корзину
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="products-pagination">
+                            <nav class="woocommerce-pagination">
+                                <ul class="page-numbers">
+                                    <li>
+                                        <a class="prev page-numbers" href="">
+                                            <svg width="8" height="14" viewBox="0 0 8 14">
+                                                <use xlink:href='img/svg/icons.svg#arrow-slide' />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li><span aria-current="page" class="page-numbers current">1</span></li>
+                                    <li><a class="page-numbers" href="">2</a>
+                                    </li>
+                                    <li><a class="page-numbers" href="">3</a>
+                                    </li>
+                                    <li><a class="next page-numbers" href="">
+                                            <svg width="8" height="14" viewBox="0 0 8 14">
+                                                <use xlink:href='img/svg/icons.svg#arrow-slide' />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="form form-vertical form-border">
+                            <h4>Задать вопрос</h4>
+                            <form action="#">
+                                <div class="form__item">
+                                    <input type="text" placeholder="Ваше имя">
+                                </div>
+                                <div class="form__item">
+                                    <input type="text" placeholder="+7 (___) ___-__-__ *" class="_mask-phone">
+                                </div>
+                                <div class="form__item">
+                                    <textarea placeholder="Ваш вопрос"></textarea>
+                                </div>
+                                <label class="form__privacy" for="accept">
+                                    <span></span>
+                                    <input type="checkbox" name="accept" id="accept">
+                                    <p>Я согласен с <a href="/privacy-policy/" target="_blank">Политикой
+                                            конфиденциальности и
+                                            обработкой персональных данных</a></p>
+                                </label>
+                                <button class="_btn _btn-black">Отправить</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section request" id="request">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h2>Оставить заявку</h2>
+                </div>
+                <div class="form">
+                    <form action="#">
+                        <div class="form__row grid grid-4">
+                            <div class="form__item">
+                                <input type="text" placeholder="Ваше имя">
+                            </div>
+                            <div class="form__item">
+                                <input type="text" placeholder="+7 (___) ___-__-__ *" class="_mask-phone">
+                            </div>
+                            <div class="form__item">
+                                <input type="email" placeholder="Email">
+                            </div>
+                            <button class="_btn _btn-accent">Отправить</button>
+                        </div>
+                        <label class="form__privacy" for="accept">
+                            <span></span>
+                            <input type="checkbox" name="accept" id="accept">
+                            <p>Я согласен с <a href="/privacy-policy/" target="_blank">Политикой конфиденциальности и
+                                    обработкой персональных данных</a></p>
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

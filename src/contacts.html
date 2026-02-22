@@ -1,0 +1,86 @@
+@@include('./html/head.html', {
+"title":"Контакты",
+})
+
+@@include('./html/header.html', {
+"class":"",
+})
+
+<main>
+
+    <div class="breadcrumbs">
+        <div class="_container">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="/">
+                        <span>Главная</span>
+                    </a>
+                    <div class="sep">/</div>
+                </li>
+                <li class="active">
+                    <span>Контакты</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="section text-page map contacts-page" data-tabs-area>
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h1>Контакты</h1>
+                </div>
+                <div class="grid">
+                    <div class="map-items">
+                        <div class="map-item _active" data-tab="0">
+                            <div class="loc">
+                                <img src="img/icons/loc.svg" alt="">
+                            </div>
+                            <a href="" class="map-item__address">
+                                <span>Москва. Представительский офис</span>
+                                <label>БЦ «9 акров»: г. Москва, Научный проезд 17, офис 4-17.</label>
+                            </a>
+                            <a href="" class="map-item__contact" target="_blank"><b>Телефон:</b> +7 (495)
+                                147-23-08</a>
+                            <a href="" class="map-item__contact" target="_blank"><b>Email:</b>
+                                contact@acmg-russia.ru</a>
+                        </div>
+                        <div class="map-item" data-tab="1">
+                            <div class="loc">
+                                <img src="img/icons/loc.svg" alt="">
+                            </div>
+                            <a href="" class="map-item__address">
+                                <span>Офис–склад в БП «Ленинский»</span>
+                                <label>Московская область, Ленинский городской округ, промзона Пуговичино,
+                                    вл8</label>
+                            </a>
+                            <a href="" class="map-item__contact" target="_blank"><b>Телефон:</b> +7 (495)
+                                147-23-08</a>
+                            <a href="" class="map-item__contact" target="_blank"><b>Email:</b>
+                                contact@acmg-russia.ru</a>
+                        </div>
+                    </div>
+                    <div class="map-iframe">
+                        <div data-tab-content="0" class="_active">
+                            <iframe
+                                src="https://yandex.ru/map-widget/v1/?um=constructor%3A4ee3cb08b9e07bd55a43ffc523f4976cc135e7ac9e758375721fb503474750e5&amp;source=constructor"
+                                width="800" height="500" frameborder="0"></iframe>
+                        </div>
+                        <div data-tab-content="1">
+                            <iframe
+                                src="https://yandex.ru/map-widget/v1/?um=constructor%3A56da76cf3e7f9c6d25629654785631ce16f948e1a2803379ba36326484314cc6&amp;source=constructor"
+                                width="800" height="500" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    @@include('html/parts/request.html',{})
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

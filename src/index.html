@@ -1,0 +1,253 @@
+@@include('./html/head.html', {
+"title":"Главная",
+})
+
+@@include('./html/header.html', {
+"class":"",
+})
+
+<main>
+
+    <section class="hero">
+        <div class="hero__container _container">
+            <div class="hero__body">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div>
+                                <h1>Эффективные <br>решения для склада</h1>
+                                <p>Гидравлические тележки, самоходные тележки,<br>
+                                    штабеллеры и ричтраки</p>
+                                <a href="" class="_btn _btn-accent">Подробнее</a>
+                            </div>
+                            <img src="img/hero-slide-1.png" class="_desktop" alt="">
+                            <img src="img/hero-slide-1-mb.png" class="_mobile" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
+                                <h1>Эффективные <br>решения для склада</h1>
+                                <p>Гидравлические тележки, самоходные тележки,<br>
+                                    штабеллеры и ричтраки</p>
+                                <a href="" class="_btn _btn-accent">Подробнее</a>
+                            </div>
+                            <img src="img/hero-slide-1.png" class="_desktop" alt="">
+                            <img src="img/hero-slide-1-mb.png" class="_mobile" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
+                                <h1>Эффективные <br>решения для склада</h1>
+                                <p>Гидравлические тележки, самоходные тележки,<br>
+                                    штабеллеры и ричтраки</p>
+                                <a href="" class="_btn _btn-accent">Подробнее</a>
+                            </div>
+                            <img src="img/hero-slide-1.png" class="_desktop" alt="">
+                            <img src="img/hero-slide-1-mb.png" class="_mobile" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-controls">
+                    <button class="prev">
+                        <img src="img/icons/arrow-slide.svg" alt="">
+                    </button>
+                    <button class="next">
+                        <img src="img/icons/arrow-slide.svg" alt="">
+                    </button>
+                </div>
+                <div class="pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    @@include('html/parts/nums.html',{})
+
+    <section class="section cats" id="cats">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title _center">
+                    <h2>Виды техники</h2>
+                </div>
+                <div class="grid grid-5">
+                    <a class="cats-item">
+                        <h3>Гидравлические тележки</h3>
+                        <img src="img/cats/shtablery.png" alt="">
+                        <span>
+                            <svg width="8" height="14" viewBox="0 0 8 14">
+                                <use xlink:href='img/svg/icons.svg#arrow-slide' />
+                            </svg>
+                        </span>
+                    </a>
+                    <a class="cats-item">
+                        <h3>Самоходные тележки</h3>
+                        <img src="img/cats/samohodnye-telejki.png" alt="">
+                        <span>
+                            <svg width="8" height="14" viewBox="0 0 8 14">
+                                <use xlink:href='img/svg/icons.svg#arrow-slide' />
+                            </svg>
+                        </span>
+                    </a>
+                    <a class="cats-item">
+                        <h3>Штабелеры</h3>
+                        <img src="img/cats/shtablery.png" alt="">
+                        <span>
+                            <svg width="8" height="14" viewBox="0 0 8 14">
+                                <use xlink:href='img/svg/icons.svg#arrow-slide' />
+                            </svg>
+                        </span>
+                    </a>
+                    <a class="cats-item">
+                        <h3>Ричтраки</h3>
+                        <img src="img/cats/richtraki.png" alt="">
+                        <span>
+                            <svg width="8" height="14" viewBox="0 0 8 14">
+                                <use xlink:href='img/svg/icons.svg#arrow-slide' />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section about" id="about">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="grid grid-2">
+                    <div class="about-text">
+                        <div class="section__title">
+                            <h2>Asia Construction Machinery Group</h2>
+                            <img src="img/logo.svg" alt="">
+                        </div>
+                        <div class="text-box">
+                            <p>ACMG — многопрофильная российская компания, специализирующаяся на поставках,
+                                продаже и
+                                обслуживании техники для
+                                разнообразных отраслей.</p>
+                            <p>Мы предлагаем решения для предприятий строительной отрасли, складских комплексов,
+                                логистических центров,
+                                сельскоозяйственных производств, арендных компаний и многих других сегментов.
+                                Наша миссия — обеспечивать российских клиентов техникой высочайшего качества по
+                                выгодным
+                                условиям напрямую с ведущих
+                                китайских заводов.</p>
+                            <p><strong>Мы гарантируем своевременное сервисное обслуживание и регулярную поставку
+                                    запасных частей.</strong></p>
+                        </div>
+                    </div>
+                    <div class="about-img">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="img/about/about-1.png" data-fancybox="about-gallery">
+                                        <img src="img/about/about-1.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="img/about/about-1.png" data-fancybox="about-gallery">
+                                        <img src="img/about/about-1.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="img/about/about-1.png" data-fancybox="about-gallery">
+                                        <img src="img/about/about-1.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('html/parts/services.html',{})
+
+    <section class="section partners" id="partners">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h2>Наши партнеры</h2>
+                </div>
+                <div class="grid grid-6">
+                    <span class="partners-item">
+                        <img src="img/partners/shanmon.png" alt="">
+                    </span>
+                    <span class="partners-item">
+                        <img src="img/partners/chl.png" alt="">
+                    </span>
+                    <span class="partners-item">
+                        <img src="img/partners/heli.png" alt="">
+                    </span>
+                    <span class="partners-item">
+                        <img src="img/partners/jinma.png" alt="">
+                    </span>
+                    <span class="partners-item">
+                        <img src="img/partners/kitay.png" alt="">
+                    </span>
+                    <span class="partners-item">
+                        <img src="img/partners/wecan.png" alt="">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('html/parts/request.html',{})
+
+    <section class="section map" id="map" data-tabs-area>
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title _center">
+                    <h2>контакты</h2>
+                </div>
+                <div class="grid grid-2">
+                    <div class="map-items">
+                        <div class="map-item _active" data-tab="0">
+                            <div class="loc">
+                                <img src="img/icons/loc.svg" alt="">
+                            </div>
+                            <a href="" class="map-item__address">
+                                <span>Москва. Представительский офис</span>
+                                <label>БЦ «9 акров»: г. Москва, Научный проезд 17, офис 4-17.</label>
+                            </a>
+                            <a href="" class="map-item__contact" target="_blank"><b>Телефон:</b> +7 (495)
+                                147-23-08</a>
+                            <a href="" class="map-item__contact" target="_blank"><b>Email:</b>
+                                contact@acmg-russia.ru</a>
+                        </div>
+                        <div class="map-item" data-tab="1">
+                            <div class="loc">
+                                <img src="img/icons/loc.svg" alt="">
+                            </div>
+                            <a href="" class="map-item__address">
+                                <span>Офис–склад в БП «Ленинский»</span>
+                                <label>Московская область, Ленинский городской округ, промзона Пуговичино,
+                                    вл8</label>
+                            </a>
+                            <a href="" class="map-item__contact" target="_blank"><b>Телефон:</b> +7 (495)
+                                147-23-08</a>
+                            <a href="" class="map-item__contact" target="_blank"><b>Email:</b>
+                                contact@acmg-russia.ru</a>
+                        </div>
+                    </div>
+                    <div class="map-iframe">
+                        <div data-tab-content="0" class="_active">
+                            <iframe
+                                src="https://yandex.ru/map-widget/v1/?um=constructor%3A4ee3cb08b9e07bd55a43ffc523f4976cc135e7ac9e758375721fb503474750e5&amp;source=constructor"
+                                width="800" height="500" frameborder="0"></iframe>
+                        </div>
+                        <div data-tab-content="1">
+                            <iframe
+                                src="https://yandex.ru/map-widget/v1/?um=constructor%3A56da76cf3e7f9c6d25629654785631ce16f948e1a2803379ba36326484314cc6&amp;source=constructor"
+                                width="800" height="500" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

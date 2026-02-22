@@ -1,0 +1,81 @@
+$maxWidth: 1920;
+$maxWidthContainer: $containerWithPadding;
+$mobileWidth: 375;
+
+@mixin adaptive-value($property, $startSize, $minSize, $type) {
+    $addSize: $startSize - $minSize;
+
+    @if $type==1 {
+        //Только если меньше контейнера
+        #{$property}: $startSize + px;
+
+        @media (max-width: #{$maxWidthContainer + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$mobileWidth + px}) / #{$maxWidthContainer - $mobileWidth}));
+        }
+
+        @media (max-width: #{$mobileWidth + px}) {
+            #{$property}: $minSize + px;
+        }
+    }
+
+    @else if $type==2 {
+        //Только если больше контейнера
+        #{$property}: $startSize + px;
+
+        @media (min-width: #{$maxWidthContainer + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$mobileWidth + px}) / #{$maxWidth - $mobileWidth}));
+        }
+    }
+
+    @else {
+        //Всегда
+        #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$mobileWidth + px}) / #{$maxWidth - $mobileWidth}));
+    }
+}
+
+@mixin toggleFilterItem() {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+
+    span {
+        width: calc(100% - 40px);
+    }
+
+    .arrow {
+        width: 20px;
+        height: 20px;
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        cursor: pointer;
+
+        img,
+        svg {
+            width: 12px;
+            height: 12px;
+            flex: 0 0 auto;
+            pointer-events: none;
+        }
+    }
+
+    ul {
+        flex: 0 0 100%;
+        width: 100%;
+        display: none;
+    }
+
+    &[data-open] {
+        ul {
+            display: flex;
+        }
+
+        img,
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+}

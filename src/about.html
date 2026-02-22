@@ -1,0 +1,100 @@
+@@include('./html/head.html', {
+"title":"Компания",
+})
+
+@@include('./html/header.html', {
+"class":"",
+})
+
+<main>
+
+    <div class="breadcrumbs">
+        <div class="_container">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="/">
+                        <span>Главная</span>
+                    </a>
+                    <div class="sep">/</div>
+                </li>
+                <li class="active">
+                    <span>Компания</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="section text-page about-page">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h1>Компания</h1>
+                </div>
+                <div class="img img-circ _mobile">
+                    <img src="img/logo.svg" alt="">
+                </div>
+                <div class="flex">
+                    <div class="text-box">
+                        <p>ACMG — многопрофильная российская компания, специализирующаяся на поставках, продаже и
+                            обслуживании техники для
+                            разнообразных отраслей.</p>
+                        <p>Мы предлагаем решения для предприятий строительной отрасли, складских комплексов,
+                            логистических центров,
+                            сельскоозяйственных производств, арендных компаний и многих других сегментов.</p>
+
+                        <p class="attention">Наша миссия — обеспечивать российских клиентов техникой высочайшего
+                            качества по выгодным
+                            условиям напрямую с ведущих
+                            китайских заводов
+                        </p>
+
+                        <p>Мы гарантируем своевременное сервисное обслуживание и регулярную поставку запасных частей.
+                        </p>
+
+                    </div>
+
+                    <div class="width-397 _desktop">
+                        <div class="img">
+                            <img src="img/logo.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('html/parts/nums.html',{})
+
+    <section class="section gallery">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="grid">
+                    <div>Asia <br>Construction <br>Machinery <br>Group</div>
+                    <a href="img/gallery/gallery-1.png" data-fancybox="company">
+                        <img src="img/gallery/gallery-1.png" alt="">
+                    </a>
+                    <a href="img/gallery/gallery-2.png" data-fancybox="company">
+                        <img src="img/gallery/gallery-2.png" alt="">
+                    </a>
+                    <a href="img/gallery/gallery-3.png" data-fancybox="company">
+                        <img src="img/gallery/gallery-3.png" alt="">
+                    </a>
+                    <a href="img/gallery/gallery-4.png" data-fancybox="company">
+                        <img src="img/gallery/gallery-4.png" alt="">
+                    </a>
+                    <a href="img/gallery/gallery-5.png" data-fancybox="company">
+                        <img src="img/gallery/gallery-5.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('html/parts/services.html',{})
+
+    @@include('html/parts/request.html',{})
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

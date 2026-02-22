@@ -1,0 +1,51 @@
+@@include('./html/head.html', {
+"title":"Избранное",
+})
+
+@@include('./html/header.html', {
+"class":"",
+})
+
+<main>
+
+    <div class="breadcrumbs">
+        <div class="_container">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="/">
+                        <span>Главная</span>
+                    </a>
+                    <div class="sep">/</div>
+                </li>
+                <li class="active">
+                    <span>Избранное</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="section text-page page-favorite">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h1>Избранное</h1>
+                </div>
+                <div class="products-grid">
+                    <div class="grid grid-4">
+                        @@include('html/parts/product.html',{})
+                        @@include('html/parts/product.html',{})
+                        @@include('html/parts/product.html',{})
+                        @@include('html/parts/product.html',{})
+                        @@include('html/parts/product.html',{})
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('html/parts/request.html',{})
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

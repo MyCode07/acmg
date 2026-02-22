@@ -1,0 +1,44 @@
+@@include('./html/head.html', {
+"title":"Каталог",
+})
+
+@@include('./html/header.html', {
+"class":"",
+})
+
+<main>
+
+    <div class="breadcrumbs">
+        <div class="_container">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="/">
+                        <span>Главная</span>
+                    </a>
+                    <div class="sep">/</div>
+                </li>
+                <li class="active">
+                    <span>Каталог</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="section products">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h1>каталог</h1>
+                </div>
+                @@include('html/parts/catalog.html',{})
+            </div>
+        </div>
+    </section>
+
+    @@include('html/parts/services.html',{})
+    @@include('html/parts/request.html',{})
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

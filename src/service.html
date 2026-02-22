@@ -1,0 +1,62 @@
+@@include('./html/head.html', {
+"title":"Сeрвис",
+})
+
+@@include('./html/header.html', {
+"class":"",
+})
+
+<main>
+
+    <div class="breadcrumbs">
+        <div class="_container">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="/">
+                        <span>Главная</span>
+                    </a>
+                    <div class="sep">/</div>
+                </li>
+                <li class="active">
+                    <span>Сeрвис</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="section text-page service-page">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h1>Сeрвис</h1>
+                </div>
+                <div class="img img-circ _mobile">
+                    <img src="img/service.png" alt="">
+                </div>
+                <div class="flex">
+                    <div class="text-box">
+                        <p>Мы обеспечиваем полный цикл сервисного обслуживания техники — от диагностики до капитального
+                            ремонта. Наша задача —
+                            минимизировать простой оборудования и обеспечить его стабильную и безопасную работу.</p>
+                        <br><br>
+                        <h3>Техническое обслуживание:</h3>
+                        <p>Запасные части и сервисное обслуживание в режиме 24/7 — диагностика, ТО и ремонт в короткие
+                            сроки</p>
+                    </div>
+
+                    <div class="width-397 _desktop">
+                        <div class="img img-circ">
+                            <img src="img/service.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('html/parts/request.html',{})
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

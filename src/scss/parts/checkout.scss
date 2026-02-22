@@ -1,0 +1,121 @@
+.checkout {
+
+    // .checkout-page
+    &-page {
+        .form {
+
+            // .form__row
+            &__row {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+                margin-bottom: 24px;
+
+                @media (max-width:768px) {
+                    grid-template-columns: 1fr;
+                    gap: 12px;
+                    margin-bottom: 12px;
+                }
+
+                .form__item {
+                    margin-bottom: 0;
+                }
+            }
+
+            // .form__item
+            &__item {
+                margin-bottom: 24px;
+
+                @media (max-width:768px) {
+                    margin-bottom: 12px;
+                }
+
+                textarea {
+                    height: 160px;
+
+                    @media (max-width:768px) {
+                        height: 100px;
+                    }
+                }
+            }
+
+            // .form__privacy
+            &__privacy {}
+        }
+    }
+
+    // .checkout-fields
+    &-fields {
+        .label {
+            color: $black;
+            font-family: "RF Takt";
+            font-weight: 800;
+            line-height: 98%;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            @include adaptive-value('font-size', 24, 18, 1);
+
+            @media (max-width:768px) {
+                margin-bottom: 20px;
+            }
+
+            &:not(:first-child) {
+                margin-top: 40px;
+
+                @media (max-width:768px) {
+                    margin-top: 30px;
+                }
+            }
+        }
+
+        label {
+            display: flex;
+            gap: 8px;
+            cursor: pointer;
+            @include adaptive-value('font-size', 18, 14, 1);
+
+            &:not(:last-child) {
+                @include adaptive-value('margin-bottom', 30, 12, 1);
+            }
+
+            @media (max-width:768px) {
+                gap: 6px;
+            }
+
+            input {
+                display: none;
+            }
+
+            &:has(input:checked) span::before {
+                display: block;
+            }
+
+            span {
+                flex: 0 0 auto;
+                position: relative;
+                display: block;
+                width: 17px;
+                height: 17px;
+                border-radius: 50%;
+                border: 1px solid #DAD6D6;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 2px;
+
+                &:before {
+                    flex: 0 0 auto;
+                    content: "";
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 50%;
+                    background-color: #369939;
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // .checkout-total
+    &-total {}
+}

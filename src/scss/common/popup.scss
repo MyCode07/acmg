@@ -1,0 +1,77 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 16;
+    background-color: rgba($color: $black, $alpha: 0.5);
+
+    // .popup__container
+    &__container {}
+
+    // .popup__body
+    &__body {}
+
+    // .popup__close
+    &__close {}
+
+    // .popup__content
+    &__content {}
+}
+
+.catalog-menu {
+    top: 145px;
+    height: auto;
+    background-color: $white;
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 37px 67px;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 34px;
+
+            a {
+                display: block;
+                margin-bottom: 12px;
+                font-size: 18px;
+                color: #303030;
+
+                &:first-child {
+                    color: #141414;
+                    font-family: "RF Takt";
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 100%;
+                    letter-spacing: -0.24px;
+                    text-transform: uppercase;
+                }
+
+                &:nth-child(2) {
+                    margin-top: 24px;
+                }
+            }
+
+            span {
+                flex: 0 0 auto;
+                width: 106px;
+                height: 106px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img,
+                svg,
+                picture {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}

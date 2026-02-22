@@ -1,0 +1,110 @@
+@@include('./html/head.html', {
+"title":"Корзина",
+})
+
+@@include('./html/header.html', {
+"class":"",
+})
+
+<main>
+
+    <div class="breadcrumbs">
+        <div class="_container">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="/">
+                        <span>Главная</span>
+                    </a>
+                    <div class="sep">/</div>
+                </li>
+                <li class="active">
+                    <span>Корзина</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="section text-page cart-page">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h1>Корзина</h1>
+                </div>
+                <div class="flex">
+                    <div class="cart-items">
+                        <div class="cart-item">
+                            <a href="" class="cart-item__img">
+                                <img src="img/cart-prod.png" alt="">
+                            </a>
+                            <a href="" class="cart-item__title">Электрический штабелер с раздвижными вилами PROLIFT
+                                M2 SPN 1016 </a>
+                            <div class="quantity pro-qty">
+                                <span class="dec qty-btn minus">
+                                    <svg viewBox="0 0 15 1">
+                                        <line y1="0.5" x2="15" y2="0.5"></line>
+                                    </svg>
+                                </span>
+                                <input type="text" class="input-text qty text" value="1">
+                                <span class="inc qty-btn plus">
+                                    <svg viewBox="0 0 15 15">
+                                        <path d="M0 7.5H15M7.5 0L7.5 15"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <span class="cart-item__price">113 317 ₽</span>
+                            <a href="" class="remove cart-item__delete">
+                                <img src="img/icons/trash.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="cart-item">
+                            <a href="" class="cart-item__img">
+                                <img src="img/cart-prod.png" alt="">
+                            </a>
+                            <a href="" class="cart-item__title">Электрический штабелер с раздвижными вилами PROLIFT
+                                M2 SPN 1016 </a>
+                            <div class="quantity pro-qty">
+                                <span class="dec qty-btn minus">
+                                    <svg viewBox="0 0 15 1">
+                                        <line y1="0.5" x2="15" y2="0.5"></line>
+                                    </svg>
+                                </span>
+                                <input type="text" class="input-text qty text" value="1">
+                                <span class="inc qty-btn plus">
+                                    <svg viewBox="0 0 15 15">
+                                        <path d="M0 7.5H15M7.5 0L7.5 15"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <span class="cart-item__price">113 317 ₽</span>
+                            <a href="" class="remove cart-item__delete">
+                                <img src="img/icons/trash.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cart-total width-397">
+                        <p class="cart-total__title">Итого</p>
+                        <ol class="chars">
+                            <li id="cart-total">
+                                <span><span data-cart-count="">2</span> товара на сумму:</span>
+                                <span class="cart-total__price">226 734 ₽</span>
+                            </li>
+                            <li id="cart-sale">
+                                <span>Ваша скидка:</span>
+                                <span>-34 000 ₽</span>
+                            </li>
+                        </ol>
+                        <div class="cart-total__total cart-total__price">226 734 ₽</div>
+                        <a href="" class="_btn _btn-accent-dark">Оформить заказ</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('html/parts/realted.html',{})
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

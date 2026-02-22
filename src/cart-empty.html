@@ -1,0 +1,44 @@
+@@include('./html/head.html', {
+"title":"Корзина пустая",
+})
+
+@@include('./html/header.html', {
+"class":"",
+})
+
+<main>
+
+
+    <div class="breadcrumbs">
+        <div class="_container">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="/">
+                        <span>Главная</span>
+                    </a>
+                    <div class="sep">/</div>
+                </li>
+                <li class="active">
+                    <span>Корзина пустая</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="section text-page cart-page">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h1>Пустая корзина</h1>
+                </div>
+                <div class="cart-page__empty">
+                    <p>Для оформления заказа нужно добавить хотя бы один товар в корзину.</p>
+                    <a href="" class="_btn _btn-black">Перейти в каталог</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

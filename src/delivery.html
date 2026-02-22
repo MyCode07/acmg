@@ -1,0 +1,70 @@
+@@include('./html/head.html', {
+"title":"Доставка и оплата",
+})
+
+@@include('./html/header.html', {
+"class":"",
+})
+
+<main>
+
+    <div class="breadcrumbs">
+        <div class="_container">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="/">
+                        <span>Главная</span>
+                    </a>
+                    <div class="sep">/</div>
+                </li>
+                <li class="active">
+                    <span>Доставка и оплата</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="section text-page delivery-page">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h1>Доставка и оплата</h1>
+                </div>
+                <div class="flex">
+                    <div class="text-box">
+                        <h2>Доставка</h2>
+                        <p>Компания ACMG (Asia Construction Machinery Group) осуществляет доставку техники и
+                            оборудования по Москве, Московской области и всем регионам России.</p>
+                        <h2>Варианты доставки:</h2>
+                        <p>Сроки и стоимость доставки рассчитываются индивидуально и зависят от региона, габаритов и
+                            веса оборудования. Наши менеджеры оперативно подберут оптимальный и выгодный способ
+                            отправки.</p>
+                        <ul>
+                            <li>Самовывоз со склада</li>
+                            <li>Доставка транспортными компаниями по РФ</li>
+                            <li>Доставка крупногабаритной техники спецтранспортом</li>
+                        </ul>
+                        <h2>Оплата</h2>
+                        <p>Мы предлагаем удобные и безопасные способы оплаты:</p>
+                        <ul>
+                            <li>Безналичный расчет (с НДС)</li>
+                            <li>Оплата по счету для юридических лиц</li>
+                            <li>Возможность работы по договору</li>
+                            <li>Индивидуальные условия для постоянных клиентов</li>
+                        </ul>
+                        <p>Сроки и стоимость доставки рассчитываются индивидуально и зависят от региона, габаритов и
+                            веса оборудования. Наши менеджеры оперативно подберут оптимальный и выгодный способ
+                            отправки.</p>
+                    </div>
+                    <div class="width-397">
+                        @@include('html/parts/ask-form.html',{})
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

@@ -1,0 +1,41 @@
+@@include('./html/head.html', {
+"title":"Ошибка 404",
+})
+
+@@include('./html/header.html', {
+"class":"",
+})
+
+<main>
+
+    <div class="breadcrumbs">
+        <div class="_container">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="/">
+                        <span>Главная</span>
+                    </a>
+                    <div class="sep">/</div>
+                </li>
+                <li class="active">
+                    <span>Ошибка 404</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <section class="section section-404">
+        <div class="section__container _container">
+            <div class="section__body">
+                <h1>404</h1>
+                <p>Ничего не найдено</p>
+                <a href="/" class="_btn _btn-black">Перейти в каталог</a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')
