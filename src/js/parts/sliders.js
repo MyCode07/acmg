@@ -113,11 +113,16 @@ if (sliders.length) {
             new Swiper(slider, {
                 slidesPerView: 'auto',
                 modules: [
-                    FreeMode
+                    FreeMode, Pagination
                 ],
+
+                pagination: {
+                    el: '.page-compare .progressbar',
+                    type: 'progressbar',
+                },
                 breakpoints: {
                     300: {
-                        spaceBetween: 20,
+                        spaceBetween: 8,
                     },
                     1025: {
                         spaceBetween: 24,

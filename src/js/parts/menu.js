@@ -43,14 +43,46 @@ document.addEventListener('click', function (e) {
         unLockPadding();
     }
     if (targetEl.classList.contains('open-filter')) {
-        filter.classList.add('_open');
-        lockPadding();
+        targetEl.classList.toggle('_active');
+        filter.classList.toggle('_open');
+        let top = document.querySelector('.products-top').getBoundingClientRect().bottom
+        filter.style.top = top + 'px';
+        filter.style.height = `calc(100vh - ${top + 20}px)`;
+
+        if (filter.classList.contains('_open')) {
+            lockPadding();
+
+        } else {
+            unLockPadding();
+        }
     }
     if (targetEl.classList.contains('filter-close')) {
         filter.classList.remove('_open');
         unLockPadding();
     }
 })
+
+function clickOutsideElement(elemSelector = '', excludedSelectors = [], activeClass = '_open') {
+    const elem = document.querySelector(elemSelector);
+    if (!elem) return;
+
+    document.addEventListener('click', (e) => {
+
+        const clickedExcluded = excludedSelectors.some(selector =>
+            e.target.closest(selector)
+        );
+
+        console.log(!e.target.closest(elemSelector));
+
+
+        if (!clickedExcluded && !e.target.closest(elemSelector)) {
+            elem.classList.remove(activeClass);
+            unLockPadding();
+        }
+    });
+}
+
+clickOutsideElement('.filter', ['.open-filter']);
 
 // menu arrow buttom
 const arrow = `<div class="arrow"><svg width="12" height="7" viewBox="0 0 12 7"><path d="M6.46824 6.80994L11.8083 1.50758C11.9319 1.38495 12 1.22124 12 1.04668C12 0.872118 11.9319 0.708408 11.8083 0.585771L11.4151 0.195289C11.1589 -0.0587999 10.7425 -0.0587999 10.4867 0.195289L6.00249 4.64781L1.51326 0.190349C1.38965 0.0677115 1.22487 -4.70996e-07 1.04916 -4.78676e-07C0.873261 -4.86365e-07 0.708482 0.0677114 0.584775 0.190348L0.191706 0.58083C0.0680971 0.703564 -3.79055e-08 0.867177 -4.55358e-08 1.04174C-5.3166e-08 1.2163 0.0680971 1.38001 0.191706 1.50264L5.53664 6.80994C5.66064 6.93287 5.8262 7.00039 6.00219 7C6.17888 7.00039 6.34434 6.93287 6.46824 6.80994Z"/></svg></div>`;

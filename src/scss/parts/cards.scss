@@ -8,6 +8,23 @@
     padding: 35px 54px 45px 54px;
     position: relative;
     height: 300px;
+    border: 1px solid #F8F8F8;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: $white;
+            border-color: #E6E6E6;
+
+            span {
+                background-color: $accent_dark;
+
+                img,
+                svg {
+                    fill: $white;
+                }
+            }
+        }
+    }
 
     @media (max-width:1200px) {
         padding: 35px 45px 45px 35px;
@@ -300,19 +317,19 @@
     &__price {
         font-weight: 600;
         display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 4px 10px;
+        flex-direction: column-reverse;
         @include adaptive-value('font-size', 30, 20, 1);
 
         ins {
             text-decoration: none;
+            color: #EF1515;
         }
 
         del {
             order: 2;
-            font-size: 0.8em;
             color: #676666;
+            font-size: 14px;
+            font-weight: 400;
         }
     }
 
@@ -352,29 +369,27 @@
     .amount {}
 
     .label {
-        font-size: 20px;
-        margin-bottom: 22px;
-
-        @media (max-width:768px) {
-            font-size: 18px;
-            margin-bottom: 16px;
-        }
+        @include adaptive-value('font-size', 24, 15, 1);
+        @include adaptive-value('margin-bottom', 36, 19, 1);
+        margin-top: 36px;
+        font-weight: 500;
     }
 
     .chars {
-        margin-bottom: 26px;
-        gap: 0;
+        gap: 40px;
 
-        @media (max-width:768px) {
-            margin-bottom: 20px;
+        @media (max-width:1024px) {
+            gap: 20px;
         }
 
         li {
-            padding: 20px 0;
-            border-top: 1px solid #F5F4F4;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 18px;
+            @include adaptive-value('font-size', 20, 14, 1);
 
-            &:last-child {
-                border-bottom: 1px solid #F5F4F4;
+            @media (max-width:1024px) {
+                gap: 14px;
             }
 
             &:before {
@@ -382,13 +397,27 @@
             }
 
             & > :first-child {
-                color: #303030;
+                color: #676666;
             }
 
-            & > :last-child{
-                white-space: nowrap;
+            & > :last-child {
+                color: #303030;
             }
         }
+
+        &:not(._open) {
+            & > :nth-child(n+5) {
+                display: none;
+            }
+        }
+    }
+
+    .show-more {
+        @include adaptive-value('margin-top', 36, 19, 1);
+        @include adaptive-value('font-size', 20, 14, 1);
+        font-weight: 500;
+        color: $accent_dark;
+        text-align: left;
     }
 }
 

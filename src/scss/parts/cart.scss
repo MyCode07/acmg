@@ -9,11 +9,22 @@
             display: flex;
             flex-direction: column;
             text-align: center;
+            align-items: center;
             gap: 30px;
 
+            @media (max-width:768px) {
+                gap: 20px;
+            }
+
             p {
-                @include adaptive-value('font-size', 20, 14, 1);
-                font-weight: 500;
+                @include adaptive-value('font-size', 24, 18, 1);
+                color: #A1A1A1;
+            }
+
+            img,
+            svg {
+                width: 103px;
+                height: 103px;
             }
 
             ._btn {

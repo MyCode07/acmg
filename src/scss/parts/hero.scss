@@ -55,6 +55,10 @@
                 line-height: 120%;
                 @include adaptive-value('font-size', 24, 14, 1);
 
+                @media (max-width:768px) {
+                    display: none;
+                }
+
                 @media (max-width:425px) {
                     br {
                         display: none;
