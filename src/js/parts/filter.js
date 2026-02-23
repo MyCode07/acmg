@@ -306,5 +306,10 @@ document.addEventListener('click', function (e) {
             item.classList.remove('_active')
         });
         targetEl.classList.add('_active')
+        if (targetEl.classList.contains('view-list')) {
+            document.querySelector('.products-grid').classList.add('list');
+        } else {
+            document.querySelector('.products-grid').classList.remove('list');
+        }
     }
 })

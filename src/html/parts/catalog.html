@@ -49,86 +49,68 @@
                 <div class="filter-item__values">
                     <label for="pa_nalichie-В наличии">
                         <span></span>
-                        <span>В наличии</span>
-                        <input type="checkbox" id="pa_nalichie-В наличии" name="moshhnost" value="В наличии">
+                        В наличии
+                        <input type="checkbox" id="pa_nalichie-В наличии" name="nalichie" value="В наличии">
                     </label>
                     <label for="pa_nalichie-Предзаказ">
                         <span></span>
-                        <span>Предзаказ</span>
-                        <input type="checkbox" id="pa_nalichie-Предзаказ" name="moshhnost" value="Предзаказ">
+                        Предзаказ
+                        <input type="checkbox" id="pa_nalichie-Предзаказ" name="nalichie" value="Предзаказ">
                     </label>
                     <label for="pa_nalichie-Нет в наличии">
                         <span></span>
-                        <span>Нет в наличии</span>
-                        <input type="checkbox" id="pa_nalichie-Нет в наличии" name="moshhnost" value="Нет в наличии">
+                        Нет в наличии
+                        <input type="checkbox" id="pa_nalichie-Нет в наличии" name="nalichie" value="Нет в наличии">
                     </label>
                 </div>
             </div>
             <div class="filter-item">
                 <p><span>Наличие платформы</span></p>
                 <div class="filter-item__values">
-                    <label for="pa_nalichie-В наличии">
+                    <label for="pa_nalichie-platformy-В наличии">
                         <span></span>
-                        <span>В наличии</span>
-                        <input type="checkbox" id="pa_nalichie-В наличии" name="moshhnost" value="В наличии">
+                        В наличии
+                        <input type="checkbox" id="pa_nalichie-platformy-В наличии" name="platformy" value="В наличии">
                     </label>
-                    <label for="pa_nalichie-Предзаказ">
+                    <label for="pa_nalichie-platformy-Предзаказ">
                         <span></span>
-                        <span>Предзаказ</span>
-                        <input type="checkbox" id="pa_nalichie-Предзаказ" name="moshhnost" value="Предзаказ">
+                        Предзаказ
+                        <input type="checkbox" id="pa_nalichi-platformye-Предзаказ" name="platformy" value="Предзаказ">
                     </label>
-                    <label for="pa_nalichie-Нет в наличии">
+                    <label for="pa_nalichie-platformy-Нет в наличии">
                         <span></span>
-                        <span>Нет в наличии</span>
-                        <input type="checkbox" id="pa_nalichie-Нет в наличии" name="moshhnost" value="Нет в наличии">
+                        Нет в наличии
+                        <input type="checkbox" id="pa_nalichi-platformye-Нет в наличии" name="platformy"
+                            value="Нет в наличии">
                     </label>
                 </div>
             </div>
             <div class="filter-item">
                 <p><span>Тип аккумулятора</span></p>
                 <div class="filter-item__values">
-                    <label for="pa_nalichie-В наличии">
+                    <label for="pa_nalichie-akk-В наличии">
                         <span></span>
-                        <span>В наличии</span>
-                        <input type="checkbox" id="pa_nalichie-В наличии" name="moshhnost" value="В наличии">
+                        В наличии
+                        <input type="checkbox" id="pa_nalichie-akk-В наличии" name="akk" value="В наличии">
                     </label>
-                    <label for="pa_nalichie-Предзаказ">
+                    <label for="pa_nalichie-akk-Предзаказ">
                         <span></span>
-                        <span>Предзаказ</span>
-                        <input type="checkbox" id="pa_nalichie-Предзаказ" name="moshhnost" value="Предзаказ">
+                        Предзаказ
+                        <input type="checkbox" id="pa_nalichie-akk-Предзаказ" name="akk" value="Предзаказ">
                     </label>
-                    <label for="pa_nalichie-Нет в наличии">
+                    <label for="pa_nalichie-akk-Нет в наличии">
                         <span></span>
-                        <span>Нет в наличии</span>
-                        <input type="checkbox" id="pa_nalichie-Нет в наличии" name="moshhnost" value="Нет в наличии">
+                        Нет в наличии
+                        <input type="checkbox" id="pa_nalichie-akk-Нет в наличии" name="akk"
+                            value="Нет в наличии">
                     </label>
                 </div>
             </div>
-            <button class="_btn _btn-black" data-apply-filter>Применить</button>
+            <div class="filter-main-actions">
+                <button class="_btn _btn-border" data-apply-filter>Очистить</button>
+                <button class="_btn _btn-black" data-apply-filter>Применить</button>
+            </div>
         </form>
-
-        <div class="form form-vertical form-border">
-            <h4>Задать вопрос</h4>
-            <form action="#">
-                <div class="form__item">
-                    <input type="text" placeholder="Ваше имя">
-                </div>
-                <div class="form__item">
-                    <input type="text" placeholder="+7 (___) ___-__-__ *" class="_mask-phone">
-                </div>
-                <div class="form__item">
-                    <textarea placeholder="Ваш вопрос"></textarea>
-                </div>
-                <label class="form__privacy" for="accept">
-                    <span></span>
-                    <input type="checkbox" name="accept" id="accept">
-                    <p>Я согласен с <a href="/privacy-policy/" target="_blank">Политикой
-                            конфиденциальности и
-                            обработкой персональных данных</a></p>
-                </label>
-                <button class="_btn _btn-black">Отправить</button>
-            </form>
-        </div>
 
     </div>
     <div class="products-grid">
@@ -207,6 +189,5 @@
                 </ul>
             </nav>
         </div>
-        @@include('ask-form.html',{})
     </div>
 </div>

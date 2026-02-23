@@ -11,7 +11,7 @@
 
     // .section__title
     &__title {
-        @include adaptive-value('margin-bottom', 60, 24, 1);
+        @include adaptive-value('margin-bottom', 50, 24, 1);
 
         &._center {
             @media (min-width:1025px) {
@@ -130,6 +130,10 @@
                 }
             }
         }
+
+        p {
+            line-height: 150%;
+        }
     }
 
     // .about-img
@@ -165,6 +169,17 @@
         // .swiper-slide
         &-slide {
             height: auto;
+
+            img,
+            picture {
+                @media (max-width:768px) {
+                    height: 100%;
+                }
+            }
+
+            @media (max-width:768px) {
+                max-height: 170px;
+            }
         }
     }
 
@@ -186,12 +201,12 @@
             @media (max-width:768px) {
                 height: 110px;
                 padding: 14px;
-                border-radius: 14px;
+                border-radius: 10px;
+                justify-content: start;
             }
 
             span {
                 display: flex;
-                align-items: center;
                 justify-content: space-between;
                 gap: 10px;
             }
@@ -234,7 +249,7 @@
 
 .request {
     .section__body {
-        padding: 54px 76px 62px 76px;
+        padding: 54px 76px 62px 77px;
         border-radius: 20px;
         background-color: #EEF4EE;
 
@@ -297,7 +312,7 @@
         position: relative;
 
         @media (max-width:768px) {
-            padding: 14px 20px 16px 20px;
+            padding: 14px 20px;
             border-radius: 14px;
         }
 
@@ -343,7 +358,7 @@
             margin-bottom: 35px;
 
             @media (max-width:768px) {
-                margin-bottom: 19px;
+                margin-bottom: 16px;
                 gap: 10px;
             }
 
@@ -353,7 +368,7 @@
             }
 
             label {
-                line-height: 105%;
+                line-height: 150%;
                 color: #303030;
                 @include adaptive-value('font-size', 18, 14, 1);
             }

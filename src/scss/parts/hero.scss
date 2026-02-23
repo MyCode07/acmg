@@ -28,10 +28,15 @@
 
         // .swiper-slide
         &-slide {
+            max-height: 740px;
             position: relative;
             overflow: hidden;
             height: auto;
             @include adaptive-value('border-radius', 30, 14, 1);
+
+            @media (max-width:768px) {
+                max-height: 244px;
+            }
 
             div {
                 position: absolute;

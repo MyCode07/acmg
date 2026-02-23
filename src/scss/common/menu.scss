@@ -59,7 +59,7 @@
         @media (max-width:1024px) {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 16px;
         }
 
         li {
@@ -97,7 +97,6 @@
 
                 &:first-child {
                     color: #141414;
-                    font-family: "RF Takt";
                     font-size: 24px;
                     font-weight: 700;
                     line-height: 100%;
@@ -175,6 +174,7 @@
     @media (max-width:768px) {
         height: calc(100vh - 86px);
         top: 86px;
+        padding-bottom: 24px;
     }
 
     &._open {
@@ -255,7 +255,6 @@
             a {
                 font-size: 14px;
                 text-transform: uppercase;
-                font-family: 'RF Takt';
                 font-weight: 600;
 
                 &:hover {

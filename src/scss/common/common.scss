@@ -65,7 +65,7 @@ h6 {
 }
 
 h1 {
-    @include adaptive-value('font-size', 101, 32, 1);
+    @include adaptive-value('font-size', 100, 32, 1);
 }
 
 h2 {
@@ -164,10 +164,22 @@ h4 {
         background-color: $accent;
         color: $white;
 
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $accent_dark;
+            }
+        }
+
         // ._btn-dark
         &-dark {
             background-color: $accent_dark;
             color: $white;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    background-color: #28882B;
+                }
+            }
         }
     }
 
@@ -175,12 +187,26 @@ h4 {
     &-black {
         background-color: $black;
         color: $white;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $accent_dark;
+            }
+        }
     }
 
     // ._btn-border
     &-border {
         color: $accent_dark;
         border: 1px solid rgba($color: $accent_dark, $alpha: 0.5);
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $accent_dark;
+                border-color: $accent_dark;
+                color: $white;
+            }
+        }
     }
 }
 
@@ -363,7 +389,10 @@ section {
     margin-top: 30px;
     margin-bottom: 47px;
 
-    @media (max-width:768px) {}
+    @media (max-width:768px) {
+        margin-top: 14px;
+        margin-bottom: 35px;
+    }
 
     ul {
         display: flex;
@@ -378,7 +407,8 @@ section {
             font-size: 14px;
 
             @media (max-width:768px) {
-                font-size: 14px;
+                font-size: 9px;
+                gap: 4px;
             }
 
             color: #A1A1A1;
@@ -422,6 +452,10 @@ section {
         min-width: 212px;
         user-select: none;
         @include adaptive-value('font-size', 18, 14, 1);
+
+        @media (max-width:10248px) {
+            border-radius: 5px;
+        }
 
         img,
         label,
@@ -538,10 +572,11 @@ ul.page-numbers {
         height: 43px;
         transition: all 0.3s ease 0s;
         font-size: 16px;
+        flex: 0 0 auto;
 
         @media (max-width:768px) {
-            width: 36px;
-            height: 36px;
+            width: 35px;
+            height: 35px;
             font-size: 12px;
         }
 

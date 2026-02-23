@@ -52,6 +52,19 @@
 }
 
 .products {
+    h1 {
+        @include adaptive-value('font-size', 70, 32, 1);
+        line-height: 100%;
+
+        @media (min-width:769px) {
+            letter-spacing: -1%;
+        }
+
+        @media (max-width:768px) {
+            line-height: 90%;
+        }
+    }
+
     .flex {
         display: flex;
         justify-content: space-between;
@@ -65,6 +78,7 @@
     // .products-grid
     &-grid {
         max-width: 1240px;
+        flex: 1 1 auto;
 
         .grid {
             @media (max-width:1200px) {
@@ -125,6 +139,11 @@
                 display: none;
             }
 
+            @media (max-width:1024px) {
+                border-radius: 5px;
+                height: 36px;
+            }
+
             @media (max-width:768px) {
                 font-size: 15px;
             }
@@ -154,7 +173,7 @@
             border: 1px solid #F7F7F7;
 
             @media (max-width:1024px) {
-                height: 40px;
+                height: 36px;
                 gap: 7px;
 
                 &:not(._active) {
@@ -207,6 +226,12 @@
             }
         }
     }
+
+    .section__title {
+        @media (max-width:768px) {
+            margin-bottom: 30px;
+        }
+    }
 }
 
 .filter {
@@ -226,7 +251,7 @@
         position: fixed;
         top: 283px;
         left: 20px;
-        z-index: 10;
+        z-index: 11;
         width: calc(100% - 40px);
         padding: 14px 22px;
         background-color: $white;
@@ -346,6 +371,7 @@
             width: 100%;
             display: none;
             margin-top: 25px;
+            gap: 12px;
         }
 
         &[data-open] {
@@ -364,19 +390,30 @@
 
         label {
             cursor: pointer;
-            padding: 10px;
-            border-radius: 10px;
             color: #676666;
-            display: block;
-            width: fit-content;
+            display: flex;
+            align-items: center;
+            gap: 7px;
             @include adaptive-value('font-size', 18, 14, 1);
 
-            &:not(:last-child) {
-                margin-bottom: 4px;
+            &:has(input:checked) {
+                span {
+                    background-image: url('@img/icons/ok.svg');
+                    background-color: $accent_dark;
+                    border-color: $accent_dark;
+                }
             }
 
-            &:has(input:checked) {
-                background-color: #F8F8F8;
+            span {
+                display: block;
+                flex: 0 0 auto;
+                width: 15px;
+                height: 15px;
+                border-radius: 2px;
+                border: 1px solid #C0C0C0;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 11px;
             }
 
             input {
@@ -441,6 +478,30 @@
             &-filter-btn {
                 display: none;
             }
+        }
+    }
+
+    .filter-main-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        @media (max-width:768px) {
+            gap: 10px;
+            flex-direction: column-reverse;
+        }
+    }
+
+    ._btn-border {
+        border-color: #E6E6E6;
+        color: $black;
+    }
+
+    ._btn {
+        height: 54px;
+
+        @media (max-width:768px) {
+            height: 50px;
         }
     }
 }

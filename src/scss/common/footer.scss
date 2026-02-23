@@ -2,10 +2,10 @@
     background-color: #232824;
     padding: 57px 0 52px 0;
     color: $white;
-    margin-top: 120px;
+    margin-top: 130px;
 
     @media (max-width: 768px) {
-        padding: 53px 0 50px 0;
+        padding: 48px 0 50px 0;
         margin-top: 55px;
     }
 
@@ -36,6 +36,10 @@
             gap: 60px;
         }
 
+        @media (max-width: 768px) {
+            gap: 30px;
+        }
+
         nav {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -60,10 +64,20 @@
                     text-transform: uppercase;
                     opacity: 0.5;
                     margin-bottom: 24px;
+                    font-weight: 500;
+
+                    @media (max-width:768px) {
+                        font-size: 13px;
+                        margin-bottom: 20px;
+                    }
                 }
 
                 li:not(:last-child) {
                     margin-bottom: 17px;
+
+                    @media (max-width:768px) {
+                        margin-bottom: 14px;
+                    }
                 }
             }
         }
@@ -78,14 +92,21 @@
 
         a {
             display: block;
-            width: 230px;
+            width: 203px;
+            height: 60px;
+
+            @media (max-width: 768px) {
+                width: 133px;
+                height: 39px;
+            }
 
             img,
             svg {
-                width: 230px;
+                width: 203px;
 
                 @media (max-width: 768px) {
                     width: 133px;
+                    height: 39px;
                 }
             }
         }
@@ -104,6 +125,10 @@
 
             @media (max-width: 768px) {
                 font-size: 30px;
+
+                br {
+                    display: none;
+                }
             }
         }
     }
@@ -175,8 +200,8 @@
 
             img,
             svg {
-                width: 60px;
-                height: 60px;
+                width: 50px;
+                height: 50px;
                 object-fit: contain;
                 flex: 0 0 auto;
             }
@@ -187,7 +212,7 @@
     &__phone {
         font-size: 32px;
         font-weight: 600;
-        margin-bottom: 46px;
+        margin-bottom: 35px;
         white-space: nowrap;
 
         @media (max-width: 1024px) {
@@ -195,7 +220,7 @@
         }
 
         @media (max-width: 768px) {
-            margin-bottom: 26px;
+            margin-bottom: 21px;
         }
     }
 
@@ -223,7 +248,6 @@
         & > :last-child {
             display: flex;
             align-items: center;
-            justify-content: flex-end;
             gap: 10px;
 
             @media (min-width: 769px) {
