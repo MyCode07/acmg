@@ -662,3 +662,21 @@ main {
         }
     }
 }
+
+ul a[href*="akczii"] {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    &:before {
+        display: block;
+        content: '';
+        width: 24px;
+        height: 24px;
+        flex: 0 0 auto;
+        background-image: url('@img/icons/sale.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}

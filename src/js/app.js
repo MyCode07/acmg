@@ -3,6 +3,7 @@ import "./parts/menu.js";
 import "./parts/tabs.js";
 import "./parts/sliders.js";
 import "./parts/show-more.js";
+import "./parts/input-placeholder.js";
 import "./parts/select.js";
 import "./parts/filter.js";
 

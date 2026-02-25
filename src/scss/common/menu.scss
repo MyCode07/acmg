@@ -102,6 +102,7 @@
                     line-height: 100%;
                     letter-spacing: -0.24px;
                     text-transform: uppercase;
+                    font-family: 'RF Takt';
 
                     @media (max-width:1200px) {
                         font-size: 20px;
@@ -271,6 +272,16 @@
                         width: 20px;
                         height: 20px;
                         flex: 0 0 auto;
+                    }
+                }
+
+                &[href*="akczii"] {
+                    flex-direction: row-reverse;
+                    justify-content: flex-end;
+
+                    &:before {
+                        width: 20px;
+                        height: 20px;
                     }
                 }
             }

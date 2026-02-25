@@ -247,17 +247,20 @@
 
             img,
             svg {
-                height: 16px;
+                width: 20px;
+                height: 20px;
                 flex: 0 0 auto;
                 fill: rgba($color: #A09F9F, $alpha: 0.5);
                 pointer-events: none;
 
                 @media (max-width:768px) {
-                    height: 14px;
+                    width: 16px;
+                    height: 16px;
                 }
             }
         }
 
+        .add-to-wishlist,
         .add-to-favorite {
 
             img,
