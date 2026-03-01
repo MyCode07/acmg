@@ -296,20 +296,3 @@ document.addEventListener('DOMContentLoaded', () => {
         const priceSlider = new PriceRangeSlider();
     }
 });
-
-document.addEventListener('click', function (e) {
-    let targetEl = e.target;
-
-    if (targetEl.closest('.products-view')) {
-        const viewBtns = document.querySelectorAll('.products-view button');
-        viewBtns.forEach(item => {
-            item.classList.remove('_active')
-        });
-        targetEl.classList.add('_active')
-        if (targetEl.classList.contains('view-list')) {
-            document.querySelector('.products-grid').classList.add('list');
-        } else {
-            document.querySelector('.products-grid').classList.remove('list');
-        }
-    }
-})

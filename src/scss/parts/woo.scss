@@ -1,0 +1,36 @@
+.woocommerce-message {
+    display: none !important;
+}
+
+.added_to_cart {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #695D5D;
+    display: block;
+    margin-top: 20px;
+
+    @media (max-width:768px) {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+}
+
+.woocommerce,
+.woocommerce-cart-form {
+    width: 100%;
+}
+
+.cart-update__cart {
+    display: none;
+}
+
+.woocommerce-Price-currencySymbol {
+    display: inline !important;
+}
+
+.woocommerce-checkout-review-order {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
