@@ -101,8 +101,7 @@
                     <label for="pa_nalichie-akk-Нет в наличии">
                         <span></span>
                         Нет в наличии
-                        <input type="checkbox" id="pa_nalichie-akk-Нет в наличии" name="akk"
-                            value="Нет в наличии">
+                        <input type="checkbox" id="pa_nalichie-akk-Нет в наличии" name="akk" value="Нет в наличии">
                     </label>
                 </div>
             </div>
@@ -153,6 +152,30 @@
                     </svg>
                 </button>
             </div>
+        </div>
+        <div class="active-filters">
+            <a href="/shop/?price_min=50000&amp;price_max=990000" class="active-filters__item">В наличии
+            <svg width="14" height="14" viewBox="0 0 14 14">
+                <use xlink:href="img/svg/icons.svg#close">
+                </use>
+            </svg>
+            </a><a href="/shop/?price_max=990000&amp;nalichie%5B0%5D=vnalichii" class="active-filters__item">От <span
+                    class="woocommerce-Price-amount amount"><bdi>50 000&nbsp;<span
+                            class="woocommerce-Price-currencySymbol">₽</span></bdi></span>
+                <svg width="14" height="14" viewBox="0 0 14 14">
+                    <use xlink:href="img/svg/icons.svg#close">
+                    </use>
+                </svg>
+            </a>
+            <!-- Кнопка сброса всех фильтров -->
+            <a href="/shop/" class="reset-filters">
+                Сбросить фильтры
+                <svg width="14" height="14" viewBox="0 0 14 14">
+                    <use xlink:href="img/svg/icons.svg#close">
+                    </use>
+                </svg>
+            </a>
+
         </div>
         <div class="grid grid-3">
             @@include('product.html',{})

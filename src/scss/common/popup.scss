@@ -133,7 +133,8 @@
         }
     }
 
-    &#thanks {
+    &#thanks,
+    &#error {
         .popup-content {
             align-items: center;
             gap: 24px;
@@ -154,6 +155,10 @@
                 margin-bottom: 0;
             }
         }
+    }
+
+    .form__privacy {
+        margin: 26px 0;
     }
 }
 
