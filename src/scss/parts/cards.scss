@@ -376,8 +376,7 @@
         }
     }
 
-    .in-cart,
-    .add-to-cart {
+    ._btn {
         gap: 10px;
         margin-top: 26px;
         background-color: $accent_dark;
@@ -455,6 +454,9 @@
         color: $accent_dark;
         text-align: left;
     }
+
+    // .product-item__variable
+    &__variable {}
 }
 
 .list {
@@ -531,4 +533,4 @@
             margin-top: -4px;
         }
     }
-}
+} 

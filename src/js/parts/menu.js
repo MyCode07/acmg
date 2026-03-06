@@ -72,9 +72,6 @@ function clickOutsideElement(elemSelector = '', excludedSelectors = [], activeCl
             e.target.closest(selector)
         );
 
-        console.log(!e.target.closest(elemSelector));
-
-
         if (!clickedExcluded && !e.target.closest(elemSelector)) {
             elem.classList.remove(activeClass);
             unLockPadding();
@@ -99,7 +96,7 @@ if (submenuList.length) {
             link = li.querySelector('p span');
         }
 
-        if (submenu) {
+        if (submenu && link) {
             link.insertAdjacentHTML('afterend', arrow);
             let btn = li.querySelector('div');
 

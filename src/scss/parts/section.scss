@@ -464,6 +464,14 @@
         }
     }
 
+    .product-item {
+        min-height: 100%;
+
+        & > :last-child {
+            margin-top: auto;
+        }
+    }
+
     .swiper {
 
         // .swiper-wrapper
@@ -710,6 +718,7 @@
     }
 }
 
+.page-wishlist,
 .page-favorite {
     .products-grid {
         max-width: none;
@@ -732,6 +741,10 @@
             width: 100vw;
             padding-inline: 20px;
             margin-left: -20px;
+        }
+
+        &-slide {
+            height: auto;
         }
     }
 
@@ -784,6 +797,11 @@
     .product-item {
         padding: 0;
         border: none;
+        min-height: 100%;
+
+        & > :last-child {
+            margin-top: auto;
+        }
 
         h4,
         p,
