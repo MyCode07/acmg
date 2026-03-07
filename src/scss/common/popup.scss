@@ -285,3 +285,60 @@
         }
     }
 }
+
+.popup-cookies {
+    position: fixed;
+    z-index: 16;
+    left: 30px;
+    bottom: 30px;
+    max-width: 580px;
+    width: calc(100% - 40px);
+    display: flex;
+    gap: 30px;
+    background-color: #EEF4EE;
+    border-radius: 10px;
+    padding: 25px;
+
+    @media (max-width:768px) {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    p {
+        font-size: 12px;
+        letter-spacing: -0.01em;
+        color: #605D5D;
+
+        @media (max-width:768px) {
+            font-size: 10px;
+        }
+
+        a {
+            color: $accent_dark;
+
+            &:hover {
+                color: $accent;
+            }
+        }
+    }
+
+    ._btn {
+        font-size: 14px;
+        font-weight: 700;
+        height: 35px;
+        padding: 8px 16px;
+        border-radius: 5px;
+
+        @media (max-width:768px) {
+            font-weight: 500;
+        }
+    }
+
+    &._hide {
+        display: none;
+    }
+}

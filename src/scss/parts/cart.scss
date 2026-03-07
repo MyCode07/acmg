@@ -189,6 +189,7 @@
         max-width: 305px;
         flex: 1 1 auto;
         @include adaptive-value('font-size', 18, 14, 1);
+        user-select: none;
 
         @media (max-width:1024px) {
             grid-column: span 2;
@@ -215,6 +216,7 @@
             height: 100%;
             flex: 0 0 auto;
             fill: #A1A1A1;
+            pointer-events: none;
         }
     }
 
@@ -222,6 +224,7 @@
     &__price {
         font-weight: 600;
         @include adaptive-value('font-size', 24, 18, 1);
+        user-select: none;
 
         @media (max-width:1024px) {
             order: 10;
@@ -277,4 +280,9 @@
             height: 35px;
         }
     }
+}
+
+.simple-clear-link {
+    width: fit-content;
+    margin-top: 30px;
 }

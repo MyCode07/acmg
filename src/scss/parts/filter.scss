@@ -573,3 +573,7 @@
         }
     }
 }
+
+#clear-filters:not(.active) {
+    display: none;
+}
