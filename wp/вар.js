@@ -293,3 +293,68 @@
 //         });
 //     }
 // });
+
+
+// Функция для формирования правильного URL из комбинации атрибутов
+function getVariationUrl(combination) {
+    // Текущий базовый URL товара (без параметров)
+    const baseUrl = window.location.href.split('?')[0].split('#')[0];
+
+    // Создаем массив параметров
+    const params = [];
+
+    // Проходим по всем атрибутам в комбинации
+    for (const [attribute, value] of Object.entries(combination)) {
+        // Добавляем префикс 'attribute_' перед именем атрибута
+        params.push(`attribute_${attribute}=${encodeURIComponent(value)}`);
+    }
+
+    // Сортируем параметры для единообразия (необязательно, но полезно)
+    params.sort();
+
+    // Собираем финальный URL
+    return baseUrl + '?' + params.join('&');
+}
+
+
+// Основная функция инициализации
+function initVariationRedirect() {
+    // Находим все элементы с классом variation-option
+    const variationOptions = document.querySelectorAll('.variation-option');
+    if (variationOptions.length === 0) return;
+
+    // Добавляем обработчик клика на каждый вариант
+    variationOptions.forEach(option => {
+        option.addEventListener('click', function (e) {
+            e.preventDefault(); // Предотвращаем стандартное поведение
+
+            // Получаем данные о комбинации из data-атрибута
+            let combinationData = this.dataset.availableCombinations;
+
+            if (!combinationData) {
+                console.warn('Нет данных в data-available-combinations');
+                return;
+            }
+
+            // Парсим данные, так как они хранятся как JSON-строка
+            try {
+                // Парсим JSON строку
+                let parsedData = JSON.parse(combinationData);
+
+                // Берем первый элемент, если это массив
+                const combination = Array.isArray(parsedData) ? parsedData[0] : parsedData;
+
+                // Формируем URL и выполняем перенаправление
+                const variationUrl = getVariationUrl(combination);
+                console.log('Перенаправление на:', variationUrl);
+                window.location.href = variationUrl;
+
+            } catch (error) {
+                console.error('Ошибка обработки комбинации:', error);
+            }
+        });
+    });
+}
+
+// Запускаем инициализацию после полной загрузки DOM
+// document.addEventListener('DOMContentLoaded', initVariationRedirect);

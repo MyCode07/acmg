@@ -6,7 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@@title</title>
+    <link rel="stylesheet"
+        href="https://acmg.test-syan.ru/wp-content/plugins/wpc-linked-variation/assets/css/frontend.css?ver=4.3.9">
     <link rel="stylesheet" href="css/style.min.css">
+    <script>
+        document.addEventListener('click', function (e) {
+            let targetEl = e.target;
+
+            if (targetEl.classList.contains('wpclv-term-button')&& targetEl.classList.contains('active')) {
+                targetEl.closest('.wpclv-terms').classList.toggle('_active')
+            }
+        })
+    </script>
 </head>
 
 <div class="pages">
